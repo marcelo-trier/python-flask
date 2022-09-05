@@ -20,7 +20,20 @@ def hello_world():
         'pessoas': list2
     }
 
+
     msg = render_template("mytemplate.html", **myvars)
     return msg
+
+
+@app.route("/novo")
+def form_novo():
+    pass
+
+
+@app.route("/criar")
+def criar_pessoa():
+    pass
+
+
 
 #app.run()
