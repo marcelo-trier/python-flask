@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <h1>{{ titulo }}</h1>
+
+    <p>aqui vai codigo da paginaaaa.. abaixo uma lista:</p>
+
+    <ul>
+        {% for um_item in mylist %}
+        <li>
+            {{ um_item }}
+        </li>
+        {%endfor%}
+    </ul>
+
+    <br />
+    <ul>
+        {% for pessoa in pessoas %}
+        <li>
+            nome: {{ pessoa._nome }}, idade: {{ pessoa._idade }}
+        </li>
+        {%endfor%}
+    </ul>
+
+</body>
+
+</html>
