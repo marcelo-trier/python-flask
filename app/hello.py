@@ -1,5 +1,13 @@
 from flask import Flask, render_template
 
+# https://flask.palletsprojects.com/en/2.2.x/quickstart/
+# https://cursos.alura.com.br/course/flask-crie-webapp-python/task/102406
+# https://flask-ptbr.readthedocs.io/en/latest/
+# https://flask.palletsprojects.com/en/2.2.x/tutorial/blog/
+# https://github.com/pallets/flask
+# DJANGO: https://docs.djangoproject.com/en/4.1/intro/tutorial02/
+# https://www.fullstackpython.com/flask.html
+
 app = Flask(__name__)
 
 class Pessoa:
