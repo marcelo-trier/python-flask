@@ -1,10 +1,14 @@
 
+# COMANDOS
+   - printenv
+   - env
+
 
 # VERSÕES:
 - v1:
    -- tentar entender {% block ----- %}
    -- tentar entender como funciona o CSS no 'flaskr'
-   
+
 
 - v0:
    -- NÃO FUNCIONA CSS

@@ -1,4 +1,10 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask
+from flask import render_template
+from flask import request
+from flask import redirect
+from flask import url_for
+from flask import session
+from flask import flash
 
 # https://flask.palletsprojects.com/en/2.2.x/quickstart/
 # https://cursos.alura.com.br/course/flask-crie-webapp-python/task/102406
@@ -8,7 +14,7 @@ from flask import Flask, render_template, request, redirect
 # DJANGO: https://docs.djangoproject.com/en/4.1/intro/tutorial02/
 # https://www.fullstackpython.com/flask.html
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
 class Pessoa:
     def __init__(self, nome, idade):
@@ -65,5 +71,24 @@ def criar_pessoa():
     #myhtml = render_template('criar_ok.html', **myvars)
     return redirect('/')
 
+
+@app.route("/login")
+def tela_login():
+    myvars = {}
+    myhtml = render_template('login.html', **myvars)
+    return myhtml
+
+@app.route("/autenticar", methods=['POST'])
+def fazer_autenticacao():
+    # ERRO DE SECRET KEY..
+    if request.form['nome'] == 'admin' and request.form['senha'] == 'admin':
+
+        session['usuario'] = request.form['nome']
+        session['estah_logado'] = True
+        flash('Usuário logado com sucesso!')
+        return redirect('/')
+    else:
+        flash('Erro no login/senha. tente novamente')
+        return redirect('/login')
 
 #app.run(debug=True)

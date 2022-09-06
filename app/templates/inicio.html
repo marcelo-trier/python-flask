@@ -1,8 +1,6 @@
-<html>
-<head>
-    <link rel="stylesheet" href="../static/bootstrapp.css" />
-</head>
-<body>
+{% extends 'mybase.html' %}
+
+{% block mybody %}
     <h1>{{ titulo }}</h1>
 
     <p>aqui vai codigo da paginaaaa.. abaixo uma lista:</p>
@@ -25,6 +23,5 @@
     </ul>
 
     <a href="/novo">Clique para inserir nova pessoa</a>
-</body>
 
-</html>
+{% endblock %}

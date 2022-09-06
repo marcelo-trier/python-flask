@@ -1,19 +1,17 @@
-
 {% extends 'mybase.html' %}
 
 {% block mybody %}
-      <h1>{{ titulo }} </h1>
-
-      <form name="myform" action="/criar" method="post">
+   <h1>Digite seu login e senha:</h1>
+      <form action="/autenticar" method="post">
          <ul>
             <li>Nome: 
                <input type="text" name="nome" />
             </li>
             <li> Idade:
-               <input type="text" name="idade" />
+               <input type="password" name="senha" />
             </li>
             <li>
-               <button type="submit">Salvar</button>
+               <button type="submit">Login</button>
             </li>
          </ul>
       </form>
