@@ -15,6 +15,7 @@ from flask import flash
 # https://www.fullstackpython.com/flask.html
 
 app = Flask(__name__, static_folder="static")
+app.secret_key = 'my-test'
 
 class Pessoa:
     def __init__(self, nome, idade):
